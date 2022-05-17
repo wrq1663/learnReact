@@ -3,7 +3,6 @@ import { StoreContext } from "./context";
 
 
 
-
 export default function connect(mapStates, mapDispatchs) {
   return function exchangComt(Compt) {
     class exchangComt extends PureComponent {

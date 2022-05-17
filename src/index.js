@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App'
+import App from './App3'
 import store from './store';
 import 'antd/dist/antd.less'
-import { StoreContext } from './utils/context';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+// import { StoreContext } from './utils/context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <StoreContext.Provider value={store}>
-    <App />
-    </StoreContext.Provider>
-  </React.StrictMode>
+    <Provider store={store}>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    </Provider>
 );
